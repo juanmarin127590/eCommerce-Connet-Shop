@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect Shop</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#" onclick="showPage('home')">
+                <img src="img/logo.png" alt="Connect Shop Logo" style="height: 60px; width: auto; margin-right: 8px;">
+                Connect Shop
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showPage('home')">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showPage('catalogo')">Catálogo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showPage('carrito')">
+                            Carrito <span id="cart-count" class="badge bg-primary">0</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showPage('login')">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showPage('registro')">Registro</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showPage('perfil')">Perfil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showPage('admin')">Gestión</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content" style="padding-top: 80px;">
+        <!-- Home Page -->
+        <div id="home-page" class="page">
+            <!-- Hero Section - Los Más Vendidos -->
+            <section class="hero-section py-5">
+                <div class="container">
+                    <h2 class="h3 fw-bold mb-4">Los Más Vendidos en Ropa, Zapatos y Joyería</h2>
+                    <div class="row g-3">
+                        <div class="col-6 col-md-3">
+                            <div class="card product-card h-100">
+                                <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?w=300&h=300&fit=crop" class="card-img-top" alt="Crocs">
+                                <div class="card-body text-center p-2">
+                                    <h6 class="card-title small">Crocs Clásicos</h6>
+                                    <p class="text-primary fw-bold small mb-1">$29.99</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="card product-card h-100">
+                                <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=300&h=300&fit=crop" class="card-img-top" alt="Camiseta Blanca">
+                                <div class="card-body text-center p-2">
+                                    <h6 class="card-title small">Camiseta Básica</h6>
+                                    <p class="text-primary fw-bold small mb-1">$12.99</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="card product-card h-100">
+                                <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=300&h=300&fit=crop" class="card-img-top" alt="Conjunto Negro">
+                                <div class="card-body text-center p-2">
+                                    <h6 class="card-title small">Conjunto Negro</h6>
+                                    <p class="text-primary fw-bold small mb-1">$45.99</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="card product-card h-100">
+                                <img src="https://images.unsplash.com/photo-1571945153237-4929e783af4a?w=300&h=300&fit=crop" class="card-img-top" alt="Camiseta Granate">
+                                <div class="card-body text-center p-2">
+                                    <h6 class="card-title small">Camiseta Granate</h6>
+                                    <p class="text-primary fw-bold small mb-1">$18.99</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Main Categories Section -->
+            <section class="categories-section py-5 bg-light">
+                <div class="container">
+                    <div class="row g-4">
+                        <!-- Relojes Favoritos -->
+                        <div class="col-lg-6">
+                            <div class="category-card h-100">
+                                <h3 class="h5 fw-bold mb-3">Relojes favoritos</h3>
+                                <div class="row g-3">
+                                    <div class="col-6">
+                                        <div class="subcategory-item text-center">
+                                            <img src="https://images.unsplash.com/photo-1523170335258-f5c6c6f7ffa1?w=150&h=150&fit=crop" class="img-fluid rounded mb-2" alt="Reloj Mujeres">
+                                            <h6 class="small fw-semibold">Mujeres</h6>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="subcategory-item text-center">
+                                            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=150&h=150&fit=crop" class="img-fluid rounded mb-2" alt="Reloj Hombres">
+                                            <h6 class="small fw-semibold">Hombres</h6>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="subcategory-item text-center">
+                                            <img src="https://images.unsplash.com/photo-1594534475808-b18fc33b045e?w=150&h=150&fit=crop" class="img-fluid rounded mb-2" alt="Reloj Niñas">
+                                            <h6 class="small fw-semibold">Niñas</h6>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="subcategory-item text-center">
+                                            <img src="https://images.unsplash.com/photo-1544117519-31a4b719223d?w=150&h=150&fit=crop" class="img-fluid rounded mb-2" alt="Reloj Niños">
+                                            <h6 class="small fw-semibold">Niños</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="text-center mt-3">
+                                    <a href="#" class="btn btn-outline-primary btn-sm" onclick="showPage('catalogo')">Descubre más</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Mejora tu PC aquí -->
+                        <div class="col-lg-6">
+                            <div class="category-card h-100">
+                                <h3 class="h5 fw-bold mb-3">Mejora tu PC aquí</h3>
+                                <div class="row g-3">
+                                    <div class="col-6">
+                                        <div class="subcategory-item text-center">
+                                            <img src="img/laptop-7334774_1920.jpg" class="img-fluid rounded mb-2" alt="Portátiles">
+                                            <h6 class="small fw-semibold">Portátiles</h6>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="subcategory-item text-center">
+                                            <img src="https://images.unsplash.com/photo-1587831990711-23ca6441447b?w=150&h=150&fit=crop" class="img-fluid rounded mb-2" alt="Equipo de PC">
+                                            <h6 class="small fw-semibold">Equipo de PC</h6>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="subcategory-item text-center">
+                                            <img src="https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=150&h=150&fit=crop" class="img-fluid rounded mb-2" alt="Discos duros">
+                                            <h6 class="small fw-semibold">Discos duros</h6>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="subcategory-item text-center">
+                                            <img src="img/Monitor UltraWide-2557299_1920.jpg" class="img-fluid rounded mb-2" alt="Monitores">
+                                            <h6 class="small fw-semibold">Monitores</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="text-center mt-3">
+                                    <a href="#" class="btn btn-outline-primary btn-sm" onclick="showPage('catalogo')">Ver más</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Hallazgos fantásticos para el hogar -->
+                        <div class="col-lg-6">
+                            <div class="category-card h-100">
+                                <h3 class="h5 fw-bold mb-3">Hallazgos fantásticos para el hogar</h3>
+                                <div class="row g-3">
+                                    <div class="col-6">
+                                        <div class="subcategory-item text-center">
+                                            <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=150&h=150&fit=crop" class="img-fluid rounded mb-2" alt="Cocina">
+                                            <h6 class="small fw-semibold">Cocina</h6>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="subcategory-item text-center">
+                                            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=150&h=150&fit=crop" class="img-fluid rounded mb-2" alt="Decoración del hogar">
+                                            <h6 class="small fw-semibold">Decoración del hogar</h6>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="subcategory-item text-center">
+                                            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=150&h=150&fit=crop" class="img-fluid rounded mb-2" alt="Comedor">
+                                            <h6 class="small fw-semibold">Comedor</h6>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="subcategory-item text-center">
+                                            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=150&h=150&fit=crop" class="img-fluid rounded mb-2" alt="Hogar inteligente">
+                                            <h6 class="small fw-semibold">Hogar inteligente</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="text-center mt-3">
+                                    <a href="#" class="btn btn-outline-primary btn-sm" onclick="showPage('catalogo')">Más información</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Ofertas en categorías top -->
+                        <div class="col-lg-6">
+                            <div class="category-card h-100">
+                                <h3 class="h5 fw-bold mb-3">Ofertas en categorías top</h3>
+                                <div class="row g-3">
+                                    <div class="col-6">
+                                        <div class="subcategory-item text-center">
+                                            <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=150&h=150&fit=crop" class="img-fluid rounded mb-2" alt="Libros">
+                                            <h6 class="small fw-semibold">Libros</h6>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="subcategory-item text-center">
+                                            <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=150&h=150&fit=crop" class="img-fluid rounded mb-2" alt="Moda">
+                                            <h6 class="small fw-semibold">Moda</h6>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="subcategory-item text-center">
+                                            <img src="https://images.unsplash.com/photo-1587831990711-23ca6441447b?w=150&h=150&fit=crop" class="img-fluid rounded mb-2" alt="Equipo de PC">
+                                            <h6 class="small fw-semibold">Equipo de PC</h6>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="subcategory-item text-center">
+                                            <img src="https://images.unsplash.com/photo-1570194065650-d99fb4bedf0a?w=150&h=150&fit=crop" class="img-fluid rounded mb-2" alt="Belleza">
+                                            <h6 class="small fw-semibold">Belleza</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="text-center mt-3">
+                                    <a href="#" class="btn btn-outline-primary btn-sm" onclick="showPage('catalogo')">Ver más</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Catalogo Page -->
+        <div id="catalogo-page" class="page d-none">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <button class="btn btn-outline-secondary mb-4" onclick="showPage('home')">
+                            <i class="fas fa-arrow-left me-2"></i>Atrás
+                        </button>
+                        <h1 class="h2 fw-bold mb-4">Catálogo de Productos</h1>
+                        
+                        <!-- Search Bar -->
+                        <div class="row mb-4">
+                            <div class="col-md-6">
+                                <div class="input-group">
+                                    <span class="input-group-text">
+                                        <i class="fas fa-search"></i>
+                                    </span>
+                                    <input type="text" id="search-input" class="form-control" 
+                                           placeholder="Buscar productos..." onkeyup="filterProducts()">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Products Grid -->
+                        <div id="products-grid" class="row g-4">
+                            <!-- Products will be loaded here by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carrito Page -->
+        <div id="carrito-page" class="page d-none">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <h2 class="h3 fw-bold mb-4 text-center">Proceso de compra</h2>
+                        
+                        <!-- Stepper -->
+                        <div class="d-flex justify-content-center mb-4">
+                            <div class="stepper">
+                                <div class="step active" data-step="0">
+                                    <div class="step-number">1</div>
+                                    <div class="step-title">Carrito</div>
+                                </div>
+                                <div class="step" data-step="1">
+                                    <div class="step-number">2</div>
+                                    <div class="step-title">Datos</div>
+                                </div>
+                                <div class="step" data-step="2">
+                                    <div class="step-number">3</div>
+                                    <div class="step-title">Confirmar</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Checkout Content -->
+                        <div class="card shadow-sm">
+                            <div class="card-body" id="checkout-content">
+                                <!-- Content will be loaded here -->
+                            </div>
+                        </div>
+
+                        <!-- Navigation Buttons -->
+                        <div class="d-flex justify-content-between mt-4">
+                            <button id="prev-btn" class="btn btn-outline-secondary d-none" onclick="prevStep()">
+                                Atrás
+                            </button>
+                            <div></div>
+                            <button id="next-btn" class="btn btn-primary" onclick="nextStep()">
+                                Siguiente
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Login Page -->
+        <div id="login-page" class="page d-none">
+            <div class="container">
+                <div class="row justify-content-center align-items-center min-vh-100">
+                    <div class="col-md-4">
+                        <div class="card shadow">
+                            <div class="card-body p-4">
+                                <h2 class="h4 fw-bold mb-4 text-center">Iniciar sesión</h2>
+                                <form id="login-form">
+                                    <div class="mb-3">
+                                        <label class="form-label">Correo electrónico</label>
+                                        <input type="email" class="form-control" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Contraseña</label>
+                                        <input type="password" class="form-control" required>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary w-100">Acceder</button>
+                                </form>
+                                <div class="text-center mt-3">
+                                    <small>¿No tienes una cuenta? 
+                                        <a href="#" onclick="showPage('registro')" class="text-primary">Regístrate aquí</a>
+                                    </small>
+                                </div>
+                                <div class="text-center mt-3">
+                                    <button class="btn btn-outline-secondary" onclick="showPage('home')">
+                                        Volver al inicio
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Registro Page -->
+        <div id="registro-page" class="page d-none">
+            <div class="container">
+                <div class="row justify-content-center align-items-center min-vh-100">
+                    <div class="col-md-4">
+                        <div class="card shadow">
+                            <div class="card-body p-4">
+                                <h2 class="h4 fw-bold mb-4 text-center">Registro</h2>
+                                <form id="registro-form">
+                                    <div class="mb-3">
+                                        <label class="form-label">Nombre completo</label>
+                                        <input type="text" class="form-control" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Correo electrónico</label>
+                                        <input type="email" class="form-control" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Contraseña</label>
+                                        <input type="password" class="form-control" required>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary w-100">Registrarse</button>
+                                </form>
+                                <div class="text-center mt-3">
+                                    <small>¿Ya tienes una cuenta? 
+                                        <a href="#" onclick="showPage('login')" class="text-primary">Inicia sesión aquí</a>
+                                    </small>
+                                </div>
+                                <div class="text-center mt-3">
+                                    <button class="btn btn-outline-secondary" onclick="showPage('home')">
+                                        Volver al inicio
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Perfil Page -->
+        <div id="perfil-page" class="page d-none">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <div class="card shadow">
+                            <div class="card-body p-4">
+                                <h2 class="h4 fw-bold mb-4 text-center">Perfil de Usuario</h2>
+                                <div class="mb-3">
+                                    <strong>Nombre:</strong> 
+                                    <span class="text-muted">Nombre de ejemplo</span>
+                                </div>
+                                <div class="mb-3">
+                                    <strong>Correo:</strong> 
+                                    <span class="text-muted">usuario@ejemplo.com</span>
+                                </div>
+                                <button class="btn btn-outline-primary w-100 mb-3">Editar perfil</button>
+                                <button class="btn btn-outline-secondary w-100 mb-4" onclick="showPage('home')">
+                                    Volver al inicio
+                                </button>
+
+                                <!-- Historial de Pedidos -->
+                                <h3 class="h5 fw-bold mb-3">Historial de Pedidos</h3>
+                                <div id="pedidos-list">
+                                    <div class="card mb-3">
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between">
+                                                <div>
+                                                    <div class="fw-semibold">Pedido #A12345</div>
+                                                    <small class="text-muted">Fecha: 2024-06-12</small>
+                                                    <br>
+                                                    <small class="text-muted">Estado: <span class="fw-medium">Entregado</span></small>
+                                                </div>
+                                                <div class="text-primary fw-bold">$199.99</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card mb-3">
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between">
+                                                <div>
+                                                    <div class="fw-semibold">Pedido #A12346</div>
+                                                    <small class="text-muted">Fecha: 2024-05-30</small>
+                                                    <br>
+                                                    <small class="text-muted">Estado: <span class="fw-medium">En camino</span></small>
+                                                </div>
+                                                <div class="text-primary fw-bold">$59.99</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Admin Page -->
+        <div id="admin-page" class="page d-none">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="card shadow">
+                            <div class="card-body p-4">
+                                <!-- Botón para regresar al inicio -->
+                                <div class="text-end mb-4">
+                                    <button class="btn btn-outline-secondary" onclick="showPage('home')">
+                                        <i class="fas fa-home me-2"></i>Inicio
+                                    </button>
+                                </div>
+                                
+                                <h2 class="h4 fw-bold mb-4 text-center">Gestión de Productos</h2>
+                                
+                                <!-- Formulario para crear producto -->
+                                <div class="card mb-4">
+                                    <div class="card-header">
+                                        <h3 class="h5 fw-bold mb-0">Agregar nuevo producto</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <form id="producto-form">
+                                            <div class="mb-3">
+                                                <label class="form-label">Nombre del producto</label>
+                                                <input type="text" id="producto-nombre" class="form-control" required>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label class="form-label">Descripción</label>
+                                                <textarea id="producto-descripcion" class="form-control" rows="3"></textarea>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label class="form-label">Precio</label>
+                                                <input type="number" id="producto-precio" class="form-control" step="0.01" required>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label class="form-label">URL de imagen</label>
+                                                <input type="url" id="producto-imagen" class="form-control">
+                                            </div>
+                                            <button type="submit" class="btn btn-primary">Crear Producto</button>
+                                        </form>
+                                    </div>
+                                </div>
+
+                                <!-- Tabla de productos -->
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h3 class="h5 fw-bold mb-0">Lista de Productos</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="table-responsive">
+                                            <table class="table table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th>ID</th>
+                                                        <th>Nombre</th>
+                                                        <th>Precio</th>
+                                                        <th>Acciones</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="productos-admin-table">
+                                                    <!-- Products will be loaded here -->
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/mainApp.js"></script>
+    
+</body>
+</html>
